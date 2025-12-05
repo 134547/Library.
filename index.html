@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <style>
+        /* All existing styles remain the same */
         :root {
             --primary-color: #1e3a8a;
             --secondary-color: #3b82f6;
@@ -80,6 +80,7 @@
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
 
+        /* All existing styles remain the same... */
         /* Auth Pages Styles */
         .auth-container {
             display: flex;
@@ -2328,6 +2329,471 @@
             flex: 0 0 calc(50% - 10px);
         }
 
+        /* Contact Section Styles */
+        .contact-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            flex: 1;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        [data-theme="dark"] .contact-info {
+            background: var(--gray-800);
+        }
+
+        .contact-form-container {
+            flex: 1;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        [data-theme="dark"] .contact-form-container {
+            background: var(--gray-800);
+        }
+
+        .contact-info h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+
+        [data-theme="dark"] .contact-info h2 {
+            color: var(--gray-200);
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-item i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-info-text h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 5px;
+        }
+
+        [data-theme="dark"] .contact-info-text h3 {
+            color: var(--gray-200);
+        }
+
+        .contact-info-text p {
+            color: var(--gray-600);
+        }
+
+        [data-theme="dark"] .contact-info-text p {
+            color: var(--gray-400);
+        }
+
+        .contact-form h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+
+        [data-theme="dark"] .contact-form h2 {
+            color: var(--gray-200);
+        }
+
+        .contact-form p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+
+        [data-theme="dark"] .contact-form p {
+            color: var(--gray-400);
+        }
+
+        /* About Section Styles */
+        .about-container {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        [data-theme="dark"] .about-container {
+            background: var(--gray-800);
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 15px;
+        }
+
+        [data-theme="dark"] .about-header h2 {
+            color: var(--gray-200);
+        }
+
+        .about-header p {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        [data-theme="dark"] .about-header p {
+            color: var(--gray-400);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .about-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .about-card {
+            background: var(--gray-700);
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .about-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 10px;
+        }
+
+        [data-theme="dark"] .about-card h3 {
+            color: var(--gray-200);
+        }
+
+        .about-card p {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        [data-theme="dark"] .about-card p {
+            color: var(--gray-400);
+        }
+
+        .about-team {
+            margin-top: 40px;
+        }
+
+        .about-team h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .about-team h3 {
+            color: var(--gray-200);
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            overflow: hidden;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .team-member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-member h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 5px;
+        }
+
+        [data-theme="dark"] .team-member h4 {
+            color: var(--gray-200);
+        }
+
+        .team-member p {
+            color: var(--gray-600);
+        }
+
+        [data-theme="dark"] .team-member p {
+            color: var(--gray-400);
+        }
+
+        /* Messages Section Styles */
+        .messages-container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .messages-list {
+            flex: 1;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        [data-theme="dark"] .messages-list {
+            background: var(--gray-800);
+        }
+
+        .message-compose {
+            flex: 1;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        [data-theme="dark"] .message-compose {
+            background: var(--gray-800);
+        }
+
+        .messages-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .messages-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+
+        [data-theme="dark"] .messages-header h2 {
+            color: var(--gray-200);
+        }
+
+        .messages-filter {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            background: var(--white);
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .filter-btn {
+            background: var(--gray-700);
+            border-color: var(--gray-600);
+            color: var(--gray-300);
+        }
+
+        .filter-btn.active {
+            background: var(--secondary-color);
+            color: var(--white);
+            border-color: var(--secondary-color);
+        }
+
+        .message-item {
+            padding: 15px;
+            border-bottom: 1px solid var(--gray-100);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .message-item {
+            border-bottom-color: var(--gray-700);
+        }
+
+        .message-item:hover {
+            background: var(--gray-50);
+        }
+
+        [data-theme="dark"] .message-item:hover {
+            background: var(--gray-700);
+        }
+
+        .message-item.unread {
+            background: rgba(59, 130, 246, 0.05);
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .message-item.unread {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .message-sender {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        [data-theme="dark"] .message-sender {
+            color: var(--gray-200);
+        }
+
+        .message-date {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+        }
+
+        [data-theme="dark"] .message-date {
+            color: var(--gray-400);
+        }
+
+        .message-subject {
+            font-weight: 500;
+            color: var(--gray-700);
+            margin-bottom: 5px;
+        }
+
+        [data-theme="dark"] .message-subject {
+            color: var(--gray-300);
+        }
+
+        .message-preview {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        [data-theme="dark"] .message-preview {
+            color: var(--gray-400);
+        }
+
+        .message-compose h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+
+        [data-theme="dark"] .message-compose h2 {
+            color: var(--gray-200);
+        }
+
+        .compose-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .compose-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .compose-options {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .compose-options label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-700);
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .compose-options label {
+            color: var(--gray-300);
+        }
+
+        .compose-options input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        .message-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .empty-messages {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray-500);
+        }
+
+        [data-theme="dark"] .empty-messages {
+            color: var(--gray-400);
+        }
+
+        .empty-messages i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--gray-400);
+        }
+
+        [data-theme="dark"] .empty-messages i {
+            color: var(--gray-500);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .auth-card {
@@ -2404,6 +2870,19 @@
 
             .form-group.half {
                 flex: 1;
+            }
+
+            .contact-container,
+            .messages-container {
+                flex-direction: column;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .team-members {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
         }
     </style>
@@ -2615,6 +3094,11 @@
                         <i class="fas fa-bookmark"></i>
                         <span>Reservations</span>
                     </a>
+                    <a href="#" class="menu-item" onclick="showSection('messages')">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                        <span class="menu-badge" id="messageCountBadge">0</span>
+                    </a>
                     <a href="#" class="menu-item" onclick="showSection('profile')">
                         <i class="fas fa-user-circle"></i>
                         <span>Profile</span>
@@ -2634,6 +3118,18 @@
                     <a href="#" class="menu-item" onclick="showSection('settings')">
                         <i class="fas fa-cog"></i>
                         <span>Settings</span>
+                    </a>
+                </div>
+               
+                <div class="menu-section">
+                    <div class="menu-title">Support</div>
+                    <a href="#" class="menu-item" onclick="showSection('about')">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#" class="menu-item" onclick="showSection('contact')">
+                        <i class="fas fa-phone"></i>
+                        <span>Contact</span>
                     </a>
                 </div>
                
@@ -2900,6 +3396,60 @@
                 </div>
             </section>
 
+            <!-- Messages Section -->
+            <section id="messagesSection" class="dashboard" style="display: none;">
+                <div class="dashboard-header">
+                    <h1 class="dashboard-title">Messages</h1>
+                    <p class="dashboard-subtitle">Communicate with library users and staff</p>
+                </div>
+
+                <div class="messages-container">
+                    <div class="messages-list">
+                        <div class="messages-header">
+                            <h2>Inbox</h2>
+                            <div class="messages-filter">
+                                <button class="filter-btn active" onclick="filterMessages('all')">All</button>
+                                <button class="filter-btn" onclick="filterMessages('unread')">Unread</button>
+                                <button class="filter-btn" onclick="filterMessages('sent')">Sent</button>
+                            </div>
+                        </div>
+                        <div id="messagesList">
+                            <!-- Messages will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="message-compose">
+                        <h2>Compose Message</h2>
+                        <form class="compose-form" id="composeForm">
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-input" id="messageSubject" placeholder="Enter message subject">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-input" id="messageContent" placeholder="Type your message here"></textarea>
+                            </div>
+                            <div class="compose-options" id="adminMessageOptions" style="display: none;">
+                                <label>
+                                    <input type="checkbox" id="sendToAll">
+                                    Send to all users
+                                </label>
+                            </div>
+                            <div class="message-actions">
+                                <button type="button" class="btn btn-primary" onclick="sendMessage()">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                                <button type="button" class="btn btn-secondary" onclick="clearMessageForm()">
+                                    <i class="fas fa-times"></i>
+                                    Clear
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
             <!-- Profile Section -->
             <section id="profileSection" class="dashboard" style="display: none;">
                 <div class="dashboard-header">
@@ -3070,6 +3620,164 @@
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contactSection" class="dashboard" style="display: none;">
+                <div class="dashboard-header">
+                    <h1 class="dashboard-title">Contact Us</h1>
+                    <p class="dashboard-subtitle">Get in touch with our library team</p>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>We're here to help and answer any questions you might have. We look forward to hearing from you.</p>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-info-text">
+                                <h3>Address</h3>
+                                <p>123 Library Lane, Book City, BC 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-info-text">
+                                <h3>Phone</h3>
+                                <p>(123) 456-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-info-text">
+                                <h3>Email</h3>
+                                <p>info@librarypro.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="contact-info-text">
+                                <h3>Hours</h3>
+                                <p>Monday - Friday: 9am - 8pm<br>
+                                Saturday - Sunday: 10am - 6pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <h2>Send us a Message</h2>
+                            <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" class="form-input" id="contactName" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" id="contactEmail" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <input type="text" class="form-input" id="contactSubject" placeholder="Enter subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-input" id="contactMessage" rows="5" placeholder="Type your message here" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="aboutSection" class="dashboard" style="display: none;">
+                <div class="dashboard-header">
+                    <h1 class="dashboard-title">About Library Pro</h1>
+                    <p class="dashboard-subtitle">Learn more about our digital library management system</p>
+                </div>
+
+                <div class="about-container">
+                    <div class="about-header">
+                        <h2>Welcome to Library Pro</h2>
+                        <p>Library Pro is a comprehensive digital library management system designed to streamline library operations and enhance the user experience for both librarians and patrons.</p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="about-card">
+                            <i class="fas fa-book-open"></i>
+                            <h3>Extensive Collection</h3>
+                            <p>Access thousands of books across various genres, from classic literature to modern bestsellers, all available at your fingertips.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Community Focused</h3>
+                            <p>Connect with fellow book lovers, join book clubs, participate in reading challenges, and share your thoughts on your favorite reads.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Accessible Anywhere</h3>
+                            <p>Access your library account from any device, anywhere. Our responsive design ensures a seamless experience on desktop, tablet, or mobile.</p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Secure & Private</h3>
+                            <p>Your privacy is our priority. We use industry-standard security measures to protect your personal information and reading history.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-team">
+                        <h3>Our Team</h3>
+                        <div class="team-members">
+                            <div class="team-member">
+                                <div class="team-member-avatar">
+                                    <img src="https://picsum.photos/seed/team1/300/300.jpg" alt="Team Member">
+                                </div>
+                                <h4>Alex Johnson</h4>
+                                <p>Founder & CEO</p>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="team-member-avatar">
+                                    <img src="https://picsum.photos/seed/team2/300/300.jpg" alt="Team Member">
+                                </div>
+                                <h4>Sarah Williams</h4>
+                                <p>Head of Development</p>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="team-member-avatar">
+                                    <img src="https://picsum.photos/seed/team3/300/300.jpg" alt="Team Member">
+                                </div>
+                                <h4>Michael Chen</h4>
+                                <p>UX/UI Designer</p>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="team-member-avatar">
+                                    <img src="https://picsum.photos/seed/team4/300/300.jpg" alt="Team Member">
+                                </div>
+                                <h4>Emily Rodriguez</h4>
+                                <p>Customer Success</p>
                             </div>
                         </div>
                     </div>
@@ -3602,6 +4310,7 @@
             reservedBooks: [],
             fines: [],
             activities: [],
+            messages: [],
             settings: {
                 libraryName: "Digital Library Pro",
                 maxBooks: 5,
@@ -3620,6 +4329,7 @@
         let pageRendering = false;
         let pageNumPending = null;
         let scale = 1.5;
+        let currentMessageFilter = 'all';
 
         // Initialize the application
         document.addEventListener('DOMContentLoaded', function() {
@@ -3819,6 +4529,34 @@
                     status: "success"
                 }
             ];
+
+            // Sample messages
+            libraryData.messages = [
+                {
+                    id: 1,
+                    senderId: 1,
+                    senderName: "Admin User",
+                    recipientId: null, // null means sent to all users
+                    recipientName: "All Users",
+                    subject: "Welcome to Library Pro",
+                    content: "We're excited to have you join our digital library. Explore our collection and enjoy reading!",
+                    date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+                    read: false,
+                    type: "broadcast"
+                },
+                {
+                    id: 2,
+                    senderId: 1,
+                    senderName: "Admin User",
+                    recipientId: 2,
+                    recipientName: "John Doe",
+                    subject: "Your book is due soon",
+                    content: "Your borrowed book '1984' is due in 3 days. Please return it on time to avoid fines.",
+                    date: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+                    read: true,
+                    type: "direct"
+                }
+            ];
         }
 
         // Save data to localStorage
@@ -3844,6 +4582,12 @@
            
             // Register form
             document.getElementById('registerForm').addEventListener('submit', handleRegister);
+            
+            // Contact form
+            document.getElementById('contactForm').addEventListener('submit', handleContactForm);
+            
+            // Compose message form
+            document.getElementById('composeForm').addEventListener('submit', handleComposeMessage);
            
             // Password strength checker
             document.getElementById('registerPassword').addEventListener('input', checkPasswordStrength);
@@ -3965,6 +4709,84 @@
             showLogin();
         }
 
+        // Handle contact form submission
+        function handleContactForm(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            // Create a message from the contact form
+            const contactMessage = {
+                id: libraryData.messages.length + 1,
+                senderId: null,
+                senderName: name,
+                recipientId: 1, // Send to admin
+                recipientName: "Admin User",
+                subject: subject,
+                content: `From: ${email}\n\n${message}`,
+                date: new Date().toISOString(),
+                read: false,
+                type: "contact"
+            };
+            
+            libraryData.messages.push(contactMessage);
+            saveData();
+            
+            // Clear form
+            document.getElementById('contactForm').reset();
+            
+            showNotification('Your message has been sent. We will get back to you soon!', 'success');
+        }
+
+        // Handle compose message form submission
+        function handleComposeMessage(e) {
+            e.preventDefault();
+            
+            const subject = document.getElementById('messageSubject').value;
+            const content = document.getElementById('messageContent').value;
+            const sendToAll = document.getElementById('sendToAll').checked;
+            
+            if (!subject || !content) {
+                showNotification('Please fill in all required fields', 'error');
+                return;
+            }
+            
+            if (sendToAll && currentUser.role !== 'admin') {
+                showNotification('Only administrators can send messages to all users', 'error');
+                return;
+            }
+            
+            // Create message
+            const message = {
+                id: libraryData.messages.length + 1,
+                senderId: currentUser.id,
+                senderName: currentUser.name,
+                recipientId: sendToAll ? null : 1, // If not sending to all, send to admin
+                recipientName: sendToAll ? "All Users" : "Admin User",
+                subject: subject,
+                content: content,
+                date: new Date().toISOString(),
+                read: false,
+                type: sendToAll ? "broadcast" : "direct"
+            };
+            
+            libraryData.messages.push(message);
+            saveData();
+            
+            // Clear form
+            clearMessageForm();
+            
+            showNotification('Message sent successfully!', 'success');
+            
+            // Reload messages if on messages section
+            if (document.getElementById('messagesSection').style.display !== 'none') {
+                loadMessages();
+            }
+        }
+
         // Check password strength
         function checkPasswordStrength() {
             const password = document.getElementById('registerPassword').value;
@@ -4027,10 +4849,14 @@
                 document.getElementById('addBookBtn').style.display = 'inline-flex';
                 document.getElementById('importBooksBtn').style.display = 'inline-flex';
                 document.getElementById('exportBooksBtn').style.display = 'inline-flex';
+                document.getElementById('adminMessageOptions').style.display = 'flex';
             }
            
             // Load dashboard
             loadDashboard();
+            
+            // Update message count badge
+            updateMessageCount();
            
             showNotification(`Welcome back, ${user.name}!`, 'success');
         }
@@ -4132,6 +4958,221 @@
             });
         }
 
+        // Load messages
+        function loadMessages() {
+            const messagesList = document.getElementById('messagesList');
+            messagesList.innerHTML = '';
+            
+            // Filter messages based on current filter
+            let filteredMessages = [];
+            
+            if (currentMessageFilter === 'all') {
+                // Show all messages received by current user
+                filteredMessages = libraryData.messages.filter(m => 
+                    m.recipientId === null || m.recipientId === currentUser.id
+                );
+            } else if (currentMessageFilter === 'unread') {
+                // Show only unread messages
+                filteredMessages = libraryData.messages.filter(m => 
+                    (m.recipientId === null || m.recipientId === currentUser.id) && !m.read
+                );
+            } else if (currentMessageFilter === 'sent') {
+                // Show only messages sent by current user
+                filteredMessages = libraryData.messages.filter(m => m.senderId === currentUser.id);
+            }
+            
+            // Sort messages by date (newest first)
+            filteredMessages.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            if (filteredMessages.length === 0) {
+                messagesList.innerHTML = `
+                    <div class="empty-messages">
+                        <i class="fas fa-inbox"></i>
+                        <p>No messages found</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredMessages.forEach(message => {
+                const messageItem = document.createElement('div');
+                messageItem.className = `message-item ${!message.read ? 'unread' : ''}`;
+                messageItem.onclick = () => viewMessage(message.id);
+                
+                messageItem.innerHTML = `
+                    <div class="message-header">
+                        <div class="message-sender">${message.senderName}</div>
+                        <div class="message-date">${formatDate(message.date)}</div>
+                    </div>
+                    <div class="message-subject">${message.subject}</div>
+                    <div class="message-preview">${message.content.substring(0, 100)}${message.content.length > 100 ? '...' : ''}</div>
+                `;
+                
+                messagesList.appendChild(messageItem);
+            });
+        }
+
+        // Filter messages
+        function filterMessages(filter) {
+            currentMessageFilter = filter;
+            
+            // Update active filter button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Reload messages with new filter
+            loadMessages();
+        }
+
+        // View message
+        function viewMessage(messageId) {
+            const message = libraryData.messages.find(m => m.id === messageId);
+            if (!message) return;
+            
+            // Mark as read if it's unread
+            if (!message.read) {
+                message.read = true;
+                saveData();
+                updateMessageCount();
+                loadMessages(); // Reload to update the UI
+            }
+            
+            // Show message details in a modal
+            const modal = document.createElement('div');
+            modal.className = 'modal active';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">${message.subject}</h2>
+                        <button class="modal-close" onclick="this.closest('.modal').remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="margin-bottom: 15px;">
+                            <strong>From:</strong> ${message.senderName}<br>
+                            <strong>Date:</strong> ${formatDate(message.date)}
+                        </div>
+                        <div style="white-space: pre-wrap;">${message.content}</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" onclick="this.closest('.modal').remove()">Close</button>
+                        ${message.type === 'direct' && message.senderId !== currentUser.id ? 
+                            `<button class="btn btn-primary" onclick="replyToMessage(${message.id})">
+                                <i class="fas fa-reply"></i> Reply
+                            </button>` : ''}
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+        }
+
+        // Reply to message
+        function replyToMessage(messageId) {
+            const message = libraryData.messages.find(m => m.id === messageId);
+            if (!message) return;
+            
+            // Close the message modal
+            document.querySelector('.modal').remove();
+            
+            // Switch to messages section
+            showSection('messages');
+            
+            // Pre-fill the compose form
+            document.getElementById('messageSubject').value = `Re: ${message.subject}`;
+            document.getElementById('messageContent').value = `\n\n---\nOn ${formatDate(message.date)}, ${message.senderName} wrote:\n${message.content}`;
+            
+            // Scroll to compose form
+            document.querySelector('.message-compose').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Send message
+        function sendMessage() {
+            const subject = document.getElementById('messageSubject').value;
+            const content = document.getElementById('messageContent').value;
+            const sendToAll = document.getElementById('sendToAll').checked;
+            
+            if (!subject || !content) {
+                showNotification('Please fill in all required fields', 'error');
+                return;
+            }
+            
+            if (sendToAll && currentUser.role !== 'admin') {
+                showNotification('Only administrators can send messages to all users', 'error');
+                return;
+            }
+            
+            // Create message
+            const message = {
+                id: libraryData.messages.length + 1,
+                senderId: currentUser.id,
+                senderName: currentUser.name,
+                recipientId: sendToAll ? null : 1, // If not sending to all, send to admin
+                recipientName: sendToAll ? "All Users" : "Admin User",
+                subject: subject,
+                content: content,
+                date: new Date().toISOString(),
+                read: false,
+                type: sendToAll ? "broadcast" : "direct"
+            };
+            
+            libraryData.messages.push(message);
+            saveData();
+            
+            // Clear form
+            clearMessageForm();
+            
+            showNotification('Message sent successfully!', 'success');
+            
+            // Reload messages
+            loadMessages();
+        }
+
+        // Clear message form
+        function clearMessageForm() {
+            document.getElementById('messageSubject').value = '';
+            document.getElementById('messageContent').value = '';
+            document.getElementById('sendToAll').checked = false;
+        }
+
+        // Update message count badge
+        function updateMessageCount() {
+            const unreadCount = libraryData.messages.filter(m => 
+                (m.recipientId === null || m.recipientId === currentUser.id) && !m.read
+            ).length;
+            
+            document.getElementById('messageCountBadge').textContent = unreadCount;
+            
+            // Show/hide notification dot based on unread count
+            const notificationDot = document.querySelector('.notification-dot');
+            if (unreadCount > 0) {
+                notificationDot.style.display = 'block';
+            } else {
+                notificationDot.style.display = 'none';
+            }
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffTime = Math.abs(now - date);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays === 0) {
+                return 'Today';
+            } else if (diffDays === 1) {
+                return 'Yesterday';
+            } else if (diffDays < 7) {
+                return `${diffDays} days ago`;
+            } else {
+                return date.toLocaleDateString();
+            }
+        }
+
         // Show section
         function showSection(section) {
             // Hide all sections
@@ -4158,6 +5199,8 @@
                 loadUsers();
             } else if (section === 'borrowing') {
                 loadBorrowings();
+            } else if (section === 'messages') {
+                loadMessages();
             } else if (section === 'settings') {
                 loadSettings();
             } else if (section === 'profile') {
